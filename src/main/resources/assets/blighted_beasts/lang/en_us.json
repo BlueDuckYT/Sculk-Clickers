@@ -1,0 +1,10 @@
+{
+  "item.blighted_beasts.reaper_spawn_egg": "Reaper Spawn Egg",
+  "item.blighted_beasts.reverb_spawn_egg": "Reverb Spawn Egg",
+
+  "entity.blighted_beasts.reaper": "Reaper",
+  "entity.blighted_beasts.reverb": "Reverb",
+  "entity.blighted_beasts.reverb_projectile": "Reverb Projectile"
+
+
+}
