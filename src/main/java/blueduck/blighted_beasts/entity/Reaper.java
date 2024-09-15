@@ -1,6 +1,7 @@
 package blueduck.blighted_beasts.entity;
 
 import blueduck.blighted_beasts.Config;
+import blueduck.blighted_beasts.registry.BlightSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
@@ -107,19 +108,19 @@ public class Reaper extends Monster implements VibrationListener.VibrationListen
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.SCULK_CLICKING;
+        return BlightSounds.REAPER_AMBIENT.get();
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.WARDEN_DEATH;
+        return BlightSounds.REAPER_DEATH.get();
     }
 
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return SoundEvents.WARDEN_HURT;
+        return BlightSounds.REAPER_HURT.get();
     }
 
     public static boolean canSpawn(EntityType<Reaper> entityType, ServerLevelAccessor level, MobSpawnType type, BlockPos pos, RandomSource rand) {

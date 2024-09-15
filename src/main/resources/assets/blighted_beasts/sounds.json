@@ -1,0 +1,100 @@
+{
+  "entity.reaper.ambient": {
+    "sounds": [
+      {
+        "name": "block/sculk_sensor/sculk_clicking1",
+        "volume": 0.56
+      },
+      {
+        "name": "block/sculk_sensor/sculk_clicking2",
+        "volume": 0.56
+      },
+      {
+        "name": "block/sculk_sensor/sculk_clicking3",
+        "volume": 0.56
+      },
+      {
+        "name": "block/sculk_sensor/sculk_clicking4",
+        "volume": 0.56
+      },
+      {
+        "name": "block/sculk_sensor/sculk_clicking5",
+        "volume": 0.56
+      },
+      {
+        "name": "block/sculk_sensor/sculk_clicking6",
+        "volume": 0.56
+      }
+    ],
+    "subtitle": "subtitles.entity.reaper.ambient"
+  },
+  "entity.reaper.hurt": {
+    "sounds": [
+      "mob/warden/hurt_1",
+      "mob/warden/hurt_2",
+      "mob/warden/hurt_3",
+      "mob/warden/hurt_4"
+    ],
+    "subtitle": "subtitles.entity.reaper.hurt"
+  },
+  "entity.reaper.death": {
+    "sounds": [
+      "mob/warden/death_1",
+      "mob/warden/death_2"
+    ],
+    "subtitle": "subtitles.entity.reaper.death"
+  },
+  "entity.reverb.ambient": {
+    "sounds": [
+      {
+        "name": "mob/spider/say1",
+        "pitch": 0.5
+      },
+      {
+        "name": "mob/spider/say2",
+        "pitch": 0.5
+      },
+      {
+        "name": "mob/spider/say3",
+        "pitch": 0.5
+      },
+      {
+        "name": "mob/spider/say4",
+        "pitch": 0.5
+      }
+    ],
+    "subtitle": "subtitles.entity.reverb.ambient"
+  },
+  "entity.reverb.hurt": {
+    "sounds": [
+      "mob/warden/hurt_1",
+      "mob/warden/hurt_2",
+      "mob/warden/hurt_3",
+      "mob/warden/hurt_4"
+    ],
+    "subtitle": "subtitles.entity.reverb.hurt"
+  },
+  "entity.reverb.death": {
+    "sounds": [
+      "mob/warden/death_1",
+      "mob/warden/death_2"
+    ],
+    "subtitle": "subtitles.entity.reverb.death"
+  },
+  "entity.bloater.hurt": {
+    "sounds": [
+      "mob/warden/hurt_1",
+      "mob/warden/hurt_2",
+      "mob/warden/hurt_3",
+      "mob/warden/hurt_4"
+    ],
+    "subtitle": "subtitles.entity.bloater.hurt"
+  },
+  "entity.bloater.death": {
+    "sounds": [
+      "mob/warden/death_1",
+      "mob/warden/death_2"
+    ],
+    "subtitle": "subtitles.entity.bloater.death"
+  }
+}

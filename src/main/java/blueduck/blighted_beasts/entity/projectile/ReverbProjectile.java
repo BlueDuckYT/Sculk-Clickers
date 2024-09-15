@@ -12,6 +12,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.projectile.ThrowableProjectile;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
@@ -40,14 +41,17 @@ public class ReverbProjectile extends ThrowableProjectile {
         Entity entity1 = this.getOwner();
         LivingEntity livingentity = entity1 instanceof LivingEntity ? (LivingEntity)entity1 : null;
 
-        boolean flag = !(entity instanceof Reverb) && !(entity instanceof Reaper) && entity.hurt(DamageSource.thrown(this, livingentity), Config.reverbDamage);
+        boolean flag =  (livingentity instanceof Reverb && ((livingentity).hasEffect(BlightEntities.CONFUSION.get())) || (!(entity instanceof Reverb) && !(entity instanceof Reaper)));
+        if (flag) {
+            entity.hurt(DamageSource.thrown(this, livingentity), Config.reverbDamage);
+        }
         this.discard();
         Vec3 vec3 = this.getDeltaMovement();
         double d5 = vec3.x;
         double d6 = vec3.y;
         double d1 = vec3.z;
-        for(int i = 0; i < 4; ++i) {
-            this.getLevel().addParticle(ParticleTypes.PORTAL, this.getX() + d5 * (double)i / 2.0D, this.getY() + d6 * (double)i / 2.0D, this.getZ() + d1 * (double)i / 2.0D, -d5, -d6 + 0.2D, -d1);
+        for(int i = 0; i < 2; ++i) {
+            this.level.addParticle(ParticleTypes.SCULK_SOUL, this.getRandomX(0.5D), this.getRandomY() - 0.25D, this.getRandomZ(0.5D), (this.random.nextDouble() - 0.5D) * .5D, -this.random.nextDouble() * 0.25 + .1, (this.random.nextDouble() - 0.5D) * .5D);
         }
     }
 

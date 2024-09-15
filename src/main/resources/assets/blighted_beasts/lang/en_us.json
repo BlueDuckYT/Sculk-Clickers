@@ -1,10 +1,14 @@
 {
   "item.blighted_beasts.reaper_spawn_egg": "Reaper Spawn Egg",
   "item.blighted_beasts.reverb_spawn_egg": "Reverb Spawn Egg",
+  "item.blighted_beasts.seer_spawn_egg": "Seer Spawn Egg",
+  "item.blighted_beasts.bloater_spawn_egg": "Bloater Spawn Egg",
+  "item.blighted_beasts.sculk_pearl": "Sculk Pearl",
 
   "entity.blighted_beasts.reaper": "Reaper",
   "entity.blighted_beasts.reverb": "Reverb",
-  "entity.blighted_beasts.reverb_projectile": "Reverb Projectile"
-
-
+  "entity.blighted_beasts.reverb_projectile": "Reverb Projectile",
+  "entity.blighted_beasts.sculk_pearl": "Sculk Pearl",
+  "entity.blighted_beasts.seer": "Seer",
+  "entity.blighted_beasts.bloater": "Bloater"
 }

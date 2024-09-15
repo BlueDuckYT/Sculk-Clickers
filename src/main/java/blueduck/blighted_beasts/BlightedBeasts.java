@@ -1,6 +1,7 @@
 package blueduck.blighted_beasts;
 
 import blueduck.blighted_beasts.registry.BlightEntities;
+import blueduck.blighted_beasts.registry.BlightSounds;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
@@ -44,6 +45,8 @@ public class BlightedBeasts
 
         BlightEntities.ENTITIES.register(modEventBus);
         BlightEntities.ITEMS.register(modEventBus);
+        BlightEntities.EFFECTS.register(modEventBus);
+        BlightSounds.SOUNDS.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
