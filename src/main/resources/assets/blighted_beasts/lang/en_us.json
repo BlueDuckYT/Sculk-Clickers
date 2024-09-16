@@ -10,5 +10,23 @@
   "entity.blighted_beasts.reverb_projectile": "Reverb Projectile",
   "entity.blighted_beasts.sculk_pearl": "Sculk Pearl",
   "entity.blighted_beasts.seer": "Seer",
-  "entity.blighted_beasts.bloater": "Bloater"
+  "entity.blighted_beasts.bloater": "Bloater",
+
+  "subtitles.entity.reaper.ambient": "Reaper clicks",
+  "subtitles.entity.reaper.click": "Reaper is alerted",
+  "subtitles.entity.reaper.hurt": "Reaper hurts",
+  "subtitles.entity.reaper.death": "Reaper dies",
+  "subtitles.entity.reverb.ambient": "Reverb clicks",
+  "subtitles.entity.reverb.click": "Reverb is alerted",
+  "subtitles.entity.reverb.shoot": "Reverb shoots",
+  "subtitles.entity.reverb.hurt": "Reverb hurts",
+  "subtitles.entity.reverb.death": "Reverb dies",
+  "subtitles.entity.seer.ambient": "Seer mumbles",
+  "subtitles.entity.seer.aggro": "Seer mumbles angrily",
+  "subtitles.entity.seer.shriek": "Seer shrieks",
+  "subtitles.entity.seer.hurt": "Seer hurts",
+  "subtitles.entity.seer.death": "Seer dies",
+  "subtitles.entity.bloater.click": "Bloater is alerted",
+  "subtitles.entity.bloater.hurt": "Bloater hurts",
+  "subtitles.entity.bloater.death": "Bloater dies"
 }

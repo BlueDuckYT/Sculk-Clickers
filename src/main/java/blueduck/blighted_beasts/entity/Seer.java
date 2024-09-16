@@ -1,6 +1,7 @@
 package blueduck.blighted_beasts.entity;
 
 import blueduck.blighted_beasts.Config;
+import blueduck.blighted_beasts.registry.BlightSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
@@ -98,7 +99,7 @@ public class Seer extends EnderMan {
         public void start() {
 
             this.enderman.getNavigation().stop();
-            this.enderman.playSound(SoundEvents.SCULK_SHRIEKER_SHRIEK, 2.5F, 1.0F);
+            this.enderman.playSound(BlightSounds.SEER_SHRIEK.get(), 2.5F, 1.0F);
 
             AABB aabb = (new AABB(this.enderman.getOnPos())).inflate(48.0D);
             List<LivingEntity> nearbyEntities = this.enderman.getLevel().getEntitiesOfClass(LivingEntity.class, aabb);
@@ -127,15 +128,15 @@ public class Seer extends EnderMan {
     }
 
     protected SoundEvent getAmbientSound() {
-        return this.isCreepy() ? SoundEvents.WARDEN_ANGRY : SoundEvents.SCULK_SHRIEKER_SHRIEK;
+        return this.isCreepy() ? BlightSounds.SEER_AGGRO.get() : BlightSounds.SEER_AMBIENT.get();
     }
 
     protected SoundEvent getHurtSound(DamageSource p_32527_) {
-        return SoundEvents.WARDEN_HURT;
+        return BlightSounds.SEER_HURT.get();
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.WARDEN_DEATH;
+        return BlightSounds.SEER_DEATH.get();
     }
 
 

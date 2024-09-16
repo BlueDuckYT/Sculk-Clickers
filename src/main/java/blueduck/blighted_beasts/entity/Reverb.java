@@ -80,7 +80,7 @@ public class Reverb extends Monster implements VibrationListener.VibrationListen
     public void onSignalReceive(ServerLevel level, GameEventListener eventListener, BlockPos pos, GameEvent event, @Nullable Entity entity1, @Nullable Entity entity2, float f) {
         if(isDeadOrDying()) return;
 
-        this.playSound(SoundEvents.WARDEN_TENDRIL_CLICKS, 0.4F, -1);
+        this.playSound(BlightSounds.REVERB_CLICK.get(), 0.4F, -1);
 
         if(entity1 != null) {
             if(canTargetEntity(entity1)) {
@@ -125,7 +125,7 @@ public class Reverb extends Monster implements VibrationListener.VibrationListen
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return BlightSounds.REVERB_DEATH.get();
+        return BlightSounds.REVERB_HURT.get();
     }
 
     public static boolean canSpawn(EntityType<Reverb> entityType, ServerLevelAccessor level, MobSpawnType type, BlockPos pos, RandomSource rand) {
@@ -216,7 +216,7 @@ public class Reverb extends Monster implements VibrationListener.VibrationListen
         double d2 = p_32141_.getZ() - this.getZ();
         double d3 = Math.sqrt(d0 * d0 + d2 * d2);
         abstractarrow.shoot(d0, d1 + d3 * (double)0.2F, d2, 0.4F, (float)(14 - this.getLevel().getDifficulty().getId() * 4));
-        this.playSound(SoundEvents.LLAMA_SPIT, 1.0F, 1.0F / (this.getRandom().nextFloat() * 0.4F + 0.8F));
+        this.playSound(BlightSounds.REVERB_SHOOT.get(), 1.0F, 1.0F / (this.getRandom().nextFloat() * 0.4F + 0.8F));
         this.setTarget(null);
         this.getLevel().addFreshEntity(abstractarrow);
     }

@@ -3,6 +3,7 @@ package blueduck.blighted_beasts.entity;
 import blueduck.blighted_beasts.Config;
 import blueduck.blighted_beasts.entity.goal.BloaterSwellGoal;
 import blueduck.blighted_beasts.registry.BlightEntities;
+import blueduck.blighted_beasts.registry.BlightSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
@@ -116,7 +117,7 @@ public class Bloater extends Monster implements VibrationListener.VibrationListe
     public void onSignalReceive(ServerLevel level, GameEventListener eventListener, BlockPos pos, GameEvent event, @org.jetbrains.annotations.Nullable Entity entity1, @org.jetbrains.annotations.Nullable Entity entity2, float f) {
         if(isDeadOrDying()) return;
 
-        this.playSound(SoundEvents.WARDEN_TENDRIL_CLICKS, 0.4F, -1);
+        this.playSound(BlightSounds.BLOATER_CLICK.get(), 0.4F, -1);
 
         if(entity1 != null) {
             if(canTargetEntity(entity1)) {
@@ -235,11 +236,11 @@ public class Bloater extends Monster implements VibrationListener.VibrationListe
     }
 
     protected SoundEvent getHurtSound(DamageSource p_32309_) {
-        return SoundEvents.WARDEN_HURT;
+        return BlightSounds.BLOATER_HURT.get();
     }
 
     protected SoundEvent getDeathSound() {
-        return SoundEvents.WARDEN_DEATH;
+        return BlightSounds.BLOATER_DEATH.get();
     }
 
 

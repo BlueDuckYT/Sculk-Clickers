@@ -28,6 +28,17 @@
     ],
     "subtitle": "subtitles.entity.reaper.ambient"
   },
+  "entity.reaper.click": {
+    "sounds": [
+      "mob/warden/tendril_clicks_1",
+      "mob/warden/tendril_clicks_2",
+      "mob/warden/tendril_clicks_3",
+      "mob/warden/tendril_clicks_4",
+      "mob/warden/tendril_clicks_5",
+      "mob/warden/tendril_clicks_6"
+    ],
+    "subtitle": "subtitles.entity.reaper.click"
+  },
   "entity.reaper.hurt": {
     "sounds": [
       "mob/warden/hurt_1",
@@ -65,6 +76,24 @@
     ],
     "subtitle": "subtitles.entity.reverb.ambient"
   },
+  "entity.reverb.click": {
+    "sounds": [
+      "mob/warden/tendril_clicks_1",
+      "mob/warden/tendril_clicks_2",
+      "mob/warden/tendril_clicks_3",
+      "mob/warden/tendril_clicks_4",
+      "mob/warden/tendril_clicks_5",
+      "mob/warden/tendril_clicks_6"
+    ],
+    "subtitle": "subtitles.entity.reverb.click"
+  },
+  "entity.reverb.shoot": {
+    "sounds": [
+      "mob/llama/spit1",
+      "mob/llama/spit2"
+    ],
+    "subtitle": "subtitles.entity.reverb.shoot"
+  },
   "entity.reverb.hurt": {
     "sounds": [
       "mob/warden/hurt_1",
@@ -80,6 +109,57 @@
       "mob/warden/death_2"
     ],
     "subtitle": "subtitles.entity.reverb.death"
+  },
+  "entity.seer.ambient": {
+    "sounds": [
+      "blighted_beasts:entity/seer/seer_ambient_1",
+      "blighted_beasts:entity/seer/seer_ambient_2"
+    ],
+    "subtitle": "subtitles.entity.reverb.ambient"
+  },
+  "entity.seer.aggro": {
+    "sounds": [
+      "blighted_beasts:entity/seer/seer_aggro_1",
+      "blighted_beasts:entity/seer/seer_aggro_2",
+      "blighted_beasts:entity/seer/seer_aggro_3"
+    ],
+    "subtitle": "subtitles.entity.seer.aggro"
+  },
+  "entity.seer.shriek": {
+    "sounds": [
+      "mob/warden/hurt_1",
+      "mob/warden/hurt_2",
+      "mob/warden/hurt_3",
+      "mob/warden/hurt_4"
+    ],
+    "subtitle": "subtitles.entity.seer.shriek"
+  },
+  "entity.seer.hurt": {
+    "sounds": [
+      "mob/warden/hurt_1",
+      "mob/warden/hurt_2",
+      "mob/warden/hurt_3",
+      "mob/warden/hurt_4"
+    ],
+    "subtitle": "subtitles.entity.seer.hurt"
+  },
+  "entity.seer.death": {
+    "sounds": [
+      "mob/warden/death_1",
+      "mob/warden/death_2"
+    ],
+    "subtitle": "subtitles.entity.seer.death"
+  },
+  "entity.bloater.click": {
+    "sounds": [
+      "mob/warden/tendril_clicks_1",
+      "mob/warden/tendril_clicks_2",
+      "mob/warden/tendril_clicks_3",
+      "mob/warden/tendril_clicks_4",
+      "mob/warden/tendril_clicks_5",
+      "mob/warden/tendril_clicks_6"
+    ],
+    "subtitle": "subtitles.entity.bloater.click"
   },
   "entity.bloater.hurt": {
     "sounds": [

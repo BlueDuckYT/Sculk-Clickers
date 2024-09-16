@@ -75,7 +75,7 @@ public class Reaper extends Monster implements VibrationListener.VibrationListen
     public void onSignalReceive(ServerLevel level, GameEventListener eventListener, BlockPos pos, GameEvent event, @Nullable Entity entity1, @Nullable Entity entity2, float f) {
         if(isDeadOrDying()) return;
 
-        this.playSound(SoundEvents.WARDEN_TENDRIL_CLICKS, 0.4F, -1);
+        this.playSound(BlightSounds.REAPER_CLICK.get(), 0.4F, -1);
 
         if(entity1 != null) {
             if(canTargetEntity(entity1)) {
