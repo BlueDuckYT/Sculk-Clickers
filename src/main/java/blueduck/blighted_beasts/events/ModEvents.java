@@ -1,9 +1,6 @@
 package blueduck.blighted_beasts.events;
 
-import blueduck.blighted_beasts.entity.Bloater;
-import blueduck.blighted_beasts.entity.Reaper;
-import blueduck.blighted_beasts.entity.Reverb;
-import blueduck.blighted_beasts.entity.Seer;
+import blueduck.blighted_beasts.entity.*;
 import blueduck.blighted_beasts.registry.BlightEntities;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -24,6 +21,7 @@ public class ModEvents {
         event.put(BlightEntities.REVERB.get(), Reverb.createAttributes().build());
         event.put(BlightEntities.SEER.get(), Seer.createAttributes().build());
         event.put(BlightEntities.BLOATER.get(), Bloater.createAttributes().build());
+        event.put(BlightEntities.SKITTER.get(), Skitter.createAttributes().build());
 
 
     }
@@ -34,6 +32,7 @@ public class ModEvents {
         event.register(BlightEntities.REVERB.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.WORLD_SURFACE, Reverb::canSpawn, SpawnPlacementRegisterEvent.Operation.OR);
         event.register(BlightEntities.SEER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.WORLD_SURFACE, Seer::canSpawn, SpawnPlacementRegisterEvent.Operation.OR);
         event.register(BlightEntities.BLOATER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.WORLD_SURFACE, Bloater::canSpawn, SpawnPlacementRegisterEvent.Operation.OR);
+        event.register(BlightEntities.SKITTER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.WORLD_SURFACE, Skitter::canSpawn, SpawnPlacementRegisterEvent.Operation.OR);
     }
 
         @SubscribeEvent

@@ -51,6 +51,10 @@ public class Config
             .comment("Whether the bloater should attack all mobs or just players")
             .define("bloaters_attack_all_mobs", false);
 
+    private static final ForgeConfigSpec.BooleanValue SKITTERS_ATTACK_ALL_MOBS = BUILDER
+            .comment("Whether the skitter should attack all mobs or just players")
+            .define("skitters_attack_all_mobs", true);
+
 
 
     static final ForgeConfigSpec SPEC = BUILDER.build();
@@ -67,6 +71,7 @@ public class Config
     public static boolean sculkPearlInfighting;
     public static int sculkPearlDuration;
     public static boolean bloatersAttackAllMobs;
+    public static boolean skittersAttackAllMobs;
 
 
     @SubscribeEvent
@@ -84,5 +89,6 @@ public class Config
         sculkPearlInfighting = SCULK_PEARL_CAUSES_INFIGHTING.get();
         sculkPearlDuration = SCULK_PEARL_CONFUSION_DURATION.get();
         bloatersAttackAllMobs = BLOATERS_ATTACK_ALL_MOBS.get();
+        skittersAttackAllMobs = SKITTERS_ATTACK_ALL_MOBS.get();
     }
 }

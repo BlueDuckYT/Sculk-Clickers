@@ -38,4 +38,9 @@ public class BlightSounds {
     public static final RegistryObject<SoundEvent> BLOATER_DEATH = SOUNDS.register("entity.bloater.death", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.bloater.death")));
 
 
+    public static final RegistryObject<SoundEvent> SKITTER_AMBIENT = SOUNDS.register("entity.skitter.ambient", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.skitter.ambient")));
+    public static final RegistryObject<SoundEvent> SKITTER_HURT = SOUNDS.register("entity.skitter.hurt", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.skitter.hurt")));
+    public static final RegistryObject<SoundEvent> SKITTER_DEATH = SOUNDS.register("entity.skitter.death", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.skitter.death")));
+
+
 }

@@ -176,5 +176,50 @@
       "mob/warden/death_2"
     ],
     "subtitle": "subtitles.entity.bloater.death"
+  },
+  "entity.skitter.ambient": {
+  "sounds": [
+    {
+      "name": "block/sculk_sensor/sculk_clicking1",
+      "volume": 0.56
+    },
+    {
+      "name": "block/sculk_sensor/sculk_clicking2",
+      "volume": 0.56
+    },
+    {
+      "name": "block/sculk_sensor/sculk_clicking3",
+      "volume": 0.56
+    },
+    {
+      "name": "block/sculk_sensor/sculk_clicking4",
+      "volume": 0.56
+    },
+    {
+      "name": "block/sculk_sensor/sculk_clicking5",
+      "volume": 0.56
+    },
+    {
+      "name": "block/sculk_sensor/sculk_clicking6",
+      "volume": 0.56
+    }
+  ],
+  "subtitle": "subtitles.entity.skitter.ambient"
+  },
+  "entity.skitter.hurt": {
+    "sounds": [
+      "mob/warden/hurt_1",
+      "mob/warden/hurt_2",
+      "mob/warden/hurt_3",
+      "mob/warden/hurt_4"
+    ],
+    "subtitle": "subtitles.entity.skitter.hurt"
+  },
+  "entity.skitter.death": {
+    "sounds": [
+      "mob/warden/death_1",
+      "mob/warden/death_2"
+    ],
+    "subtitle": "subtitles.entity.skitter.death"
   }
 }

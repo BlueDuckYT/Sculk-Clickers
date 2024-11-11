@@ -2,10 +2,7 @@ package blueduck.blighted_beasts.registry;
 
 import blueduck.blighted_beasts.BlightedBeasts;
 import blueduck.blighted_beasts.effect.ConfusionEffect;
-import blueduck.blighted_beasts.entity.Bloater;
-import blueduck.blighted_beasts.entity.Reaper;
-import blueduck.blighted_beasts.entity.Reverb;
-import blueduck.blighted_beasts.entity.Seer;
+import blueduck.blighted_beasts.entity.*;
 import blueduck.blighted_beasts.entity.projectile.ReverbProjectile;
 import blueduck.blighted_beasts.entity.projectile.SculkPearlProjectile;
 import blueduck.blighted_beasts.item.SculkPearlItem;
@@ -52,6 +49,10 @@ public class BlightEntities {
             () -> EntityType.Builder.of(Bloater::new, MobCategory.MONSTER).sized(0.6F, 1.95F)
                     .build(new ResourceLocation(BlightedBeasts.MODID, "bloater").toString()));
 
+    public static final RegistryObject<EntityType<Skitter>> SKITTER = ENTITIES.register("skitter",
+            () -> EntityType.Builder.of(Skitter::new, MobCategory.MONSTER).sized(1.3F, 1.9F)
+                    .build(new ResourceLocation(BlightedBeasts.MODID, "skitter").toString()));
+
 
     public static final RegistryObject<EntityType<SculkPearlProjectile>> SCULK_PEARL = ENTITIES.register("sculk_pearl",
             () -> EntityType.Builder.<SculkPearlProjectile>of(SculkPearlProjectile::new, MobCategory.MISC).sized(.6f, .6f)
@@ -78,7 +79,11 @@ public class BlightEntities {
                     new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<ForgeSpawnEggItem> BLOATER_SPAWN_EGG = ITEMS.register("bloater_spawn_egg",
-            () -> new ForgeSpawnEggItem(BLOATER, 11589343, 7062271,
+            () -> new ForgeSpawnEggItem(BLOATER, 7638684, 5484769,
+                    new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<ForgeSpawnEggItem> SKITTER_SPAWN_EGG = ITEMS.register("skitter_spawn_egg",
+            () -> new ForgeSpawnEggItem(SKITTER, 8307, 1872861,
                     new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<Item> SCULK_PEARL_ITEM = ITEMS.register("sculk_pearl",

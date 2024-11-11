@@ -1,10 +1,7 @@
 package blueduck.blighted_beasts.client;
 
 import blueduck.blighted_beasts.BlightedBeasts;
-import blueduck.blighted_beasts.client.model.BloaterModel;
-import blueduck.blighted_beasts.client.model.ReaperModel;
-import blueduck.blighted_beasts.client.model.ReverbModel;
-import blueduck.blighted_beasts.client.model.SeerModel;
+import blueduck.blighted_beasts.client.model.*;
 import blueduck.blighted_beasts.client.renderer.*;
 import blueduck.blighted_beasts.registry.BlightEntities;
 import net.minecraftforge.api.distmarker.Dist;
@@ -25,6 +22,7 @@ public final class ClientModEvents {
         event.registerLayerDefinition(ReverbModel.LAYER_LOCATION, ReverbModel::createBodyLayer);
         event.registerLayerDefinition(SeerModel.LAYER_LOCATION, SeerModel::createBodyLayer);
         event.registerLayerDefinition(BloaterModel.LAYER_LOCATION, BloaterModel::createBodyLayer);
+        event.registerLayerDefinition(SkitterModel.LAYER_LOCATION, SkitterModel::createBodyLayer);
 
     }
 
@@ -35,6 +33,7 @@ public final class ClientModEvents {
         event.registerEntityRenderer(BlightEntities.REVERB_PROJECTILE.get(), ReverbProjectileRenderer::new);
         event.registerEntityRenderer(BlightEntities.SEER.get(), SeerRenderer::new);
         event.registerEntityRenderer(BlightEntities.BLOATER.get(), BloaterRenderer::new);
+        event.registerEntityRenderer(BlightEntities.SKITTER.get(), SkitterRenderer::new);
         event.registerEntityRenderer(BlightEntities.SCULK_PEARL.get(), SculkPearlRenderer::new);
     }
 }
