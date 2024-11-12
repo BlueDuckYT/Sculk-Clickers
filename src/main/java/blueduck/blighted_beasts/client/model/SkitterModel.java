@@ -84,7 +84,21 @@ public class SkitterModel<T extends Skitter> extends HierarchicalModel<T> {
 
 		body.y = (float) Math.sin(ageInTicks * 0.1 + 5) - 24.0F;
 
-		head.xRot = (float) Math.cos(ageInTicks * 0.075) * 0.05F + .1745F;
+		float scale = (float) Math.abs(Math.sin(ageInTicks * 0.1 + 5)) * 0.01F + 1;
+		body.xScale = scale;
+		body.yScale = scale;
+		body.zScale = scale;
+
+		head.xRot = (float) Math.cos(ageInTicks * 0.1) * 0.05F + .1745F;
+
+		if (entity.swinging) {
+			head.z = (float) (Math.sin(entity.attackAnim * 6.28) * -6.0F  - 6.0F);
+		}
+		else {
+			head.z = -6F;
+		}
+
+
 	}
 
 	@Override

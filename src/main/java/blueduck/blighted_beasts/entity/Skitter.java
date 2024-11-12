@@ -106,6 +106,11 @@ public class Skitter extends Monster implements VibrationListener.VibrationListe
         return false;
     }
 
+    public void aiStep() {
+
+        super.aiStep();
+    }
+
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
@@ -143,6 +148,19 @@ public class Skitter extends Monster implements VibrationListener.VibrationListe
             this.dynamicGameEventListener.getListener().tick(serverlevel);
         }
 
+        int i = 60;
+        if (this.swinging) {
+            ++this.swingTime;
+            if (this.swingTime >= i) {
+                this.swingTime = 0;
+                this.swinging = false;
+            }
+        } else {
+            this.swingTime = 0;
+        }
+
+        this.attackAnim = (float)this.swingTime / (float)i;
+
 
         if (this.getSpeed() > 0) {
             if (this.getTarget() == null && !this.walkAnimationState.isStarted()) {
@@ -178,7 +196,7 @@ public class Skitter extends Monster implements VibrationListener.VibrationListe
 
     @Override
     protected void registerGoals() {
-        this.goalSelector.addGoal(1, new FloatGoal(this));
+        //this.goalSelector.addGoal(1, new FloatGoal(this));
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.7D, true));
         this.goalSelector.addGoal(8, new GoToDisturbanceGoal(this));
         this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
@@ -220,6 +238,11 @@ public class Skitter extends Monster implements VibrationListener.VibrationListe
                 .add(Attributes.ARMOR, 2.0D)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 0.85D);
     }
+
+    public float getStepHeight() {
+        return 1.25F;
+    }
+
 
     public BlockPos getDisturbanceLocation() {
         return this.disturbanceLocation;
