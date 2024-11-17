@@ -37,8 +37,10 @@ public class BlightSounds {
     public static final RegistryObject<SoundEvent> BLOATER_HURT = SOUNDS.register("entity.bloater.hurt", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.bloater.hurt")));
     public static final RegistryObject<SoundEvent> BLOATER_DEATH = SOUNDS.register("entity.bloater.death", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.bloater.death")));
 
+    public static final RegistryObject<SoundEvent> SKITTER_WALK = SOUNDS.register("entity.skitter.walk", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.skitter.ambient")));
+    public static final RegistryObject<SoundEvent> SKITTER_RUN = SOUNDS.register("entity.skitter.run", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.skitter.run")));
 
-    public static final RegistryObject<SoundEvent> SKITTER_AMBIENT = SOUNDS.register("entity.skitter.ambient", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.skitter.ambient")));
+    public static final RegistryObject<SoundEvent> SKITTER_AMBIENT = SOUNDS.register("entity.skitter.ambient", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.skitter.walk")));
     public static final RegistryObject<SoundEvent> SKITTER_HURT = SOUNDS.register("entity.skitter.hurt", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.skitter.hurt")));
     public static final RegistryObject<SoundEvent> SKITTER_DEATH = SOUNDS.register("entity.skitter.death", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.skitter.death")));
 

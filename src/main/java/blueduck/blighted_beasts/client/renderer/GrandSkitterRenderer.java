@@ -2,19 +2,18 @@ package blueduck.blighted_beasts.client.renderer;
 
 import blueduck.blighted_beasts.BlightedBeasts;
 import blueduck.blighted_beasts.client.model.GrandSkitterModel;
-import blueduck.blighted_beasts.client.model.SkitterModel;
-import blueduck.blighted_beasts.entity.Skitter;
+import blueduck.blighted_beasts.entity.GrandSkitter;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
-public class SkitterRenderer extends MobRenderer<Skitter, SkitterModel<Skitter>> {
-    public SkitterRenderer(EntityRendererProvider.Context context) {
-        super(context, new SkitterModel<>(context.bakeLayer(SkitterModel.LAYER_LOCATION)), 0.5F);
+public class GrandSkitterRenderer extends MobRenderer<GrandSkitter, GrandSkitterModel<GrandSkitter>> {
+    public GrandSkitterRenderer(EntityRendererProvider.Context context) {
+        super(context, new GrandSkitterModel<>(context.bakeLayer(GrandSkitterModel.LAYER_LOCATION)), 2.6F);
     }
 
     @Override
-    public ResourceLocation getTextureLocation(Skitter pEntity) {
+    public ResourceLocation getTextureLocation(GrandSkitter pEntity) {
         return new ResourceLocation(BlightedBeasts.MODID, "textures/entity/skitter.png");
     }
 

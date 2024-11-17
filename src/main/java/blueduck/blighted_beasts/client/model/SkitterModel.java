@@ -21,7 +21,7 @@ import net.minecraft.world.entity.AnimationState;
 public class SkitterModel<T extends Skitter> extends HierarchicalModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(BlightedBeasts.MODID, "skitter"), "main");
-	private final ModelPart root;
+	public final ModelPart root;
 	private final ModelPart body;
 	private final ModelPart head;
 	private final ModelPart leg0;

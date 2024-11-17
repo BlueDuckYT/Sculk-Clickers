@@ -23,6 +23,9 @@ public class ModEvents {
         event.put(BlightEntities.BLOATER.get(), Bloater.createAttributes().build());
         event.put(BlightEntities.SKITTER.get(), Skitter.createAttributes().build());
 
+        event.put(BlightEntities.GRAND_SKITTER.get(), GrandSkitter.createAttributes().build());
+
+
 
     }
 
@@ -33,6 +36,8 @@ public class ModEvents {
         event.register(BlightEntities.SEER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.WORLD_SURFACE, Seer::canSpawn, SpawnPlacementRegisterEvent.Operation.OR);
         event.register(BlightEntities.BLOATER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.WORLD_SURFACE, Bloater::canSpawn, SpawnPlacementRegisterEvent.Operation.OR);
         event.register(BlightEntities.SKITTER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.WORLD_SURFACE, Skitter::canSpawn, SpawnPlacementRegisterEvent.Operation.OR);
+        event.register(BlightEntities.GRAND_SKITTER.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.WORLD_SURFACE, GrandSkitter::canSpawnGrand, SpawnPlacementRegisterEvent.Operation.OR);
+
     }
 
         @SubscribeEvent

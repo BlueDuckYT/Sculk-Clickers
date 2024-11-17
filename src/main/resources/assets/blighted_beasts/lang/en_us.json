@@ -13,6 +13,7 @@
   "entity.blighted_beasts.seer": "Seer",
   "entity.blighted_beasts.bloater": "Bloater",
   "entity.blighted_beasts.skitter": "Skitter",
+  "entity.blighted_beasts.grand_skitter": "Grand Skitter",
 
   "subtitles.entity.reaper.ambient": "Reaper clicks",
   "subtitles.entity.reaper.click": "Reaper is alerted",
@@ -31,7 +32,9 @@
   "subtitles.entity.bloater.click": "Bloater is alerted",
   "subtitles.entity.bloater.hurt": "Bloater hurts",
   "subtitles.entity.bloater.death": "Bloater dies",
-  "subtitles.entity.skitter.ambient": "Skitter skits",
+  "subtitles.entity.skitter.walk": "Skitter skits",
+  "subtitles.entity.skitter.run": "Skitter skits aggressively",
+  "subtitles.entity.skitter.ambient": "Skitter clicks",
   "subtitles.entity.skitter.hurt": "Skitter hurts",
   "subtitles.entity.skitter.death": "Skitter dies"
 }

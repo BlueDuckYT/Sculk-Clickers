@@ -5,6 +5,7 @@ import blueduck.blighted_beasts.registry.BlightSounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.GameEventTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.util.RandomSource;
@@ -18,6 +19,7 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.DynamicGameEventListener;
 import net.minecraft.world.level.gameevent.EntityPositionSource;
 import net.minecraft.world.level.gameevent.GameEvent;
@@ -127,6 +129,16 @@ public class Skitter extends Monster implements VibrationListener.VibrationListe
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
         return BlightSounds.SKITTER_HURT.get();
+    }
+
+    protected void playStepSound(BlockPos p_28301_, BlockState p_28302_) {
+        if (this.getTarget() == null || this.getTarget().isDeadOrDying()) {
+            this.playSound(BlightSounds.SKITTER_WALK.get(), 1.0F, 1.0F);
+        }
+        else {
+            this.playSound(BlightSounds.SKITTER_RUN.get(), 1.25F, 0.6F);
+        }
+
     }
 
     public static boolean canSpawn(EntityType<Skitter> entityType, ServerLevelAccessor level, MobSpawnType type, BlockPos pos, RandomSource rand) {

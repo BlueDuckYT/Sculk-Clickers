@@ -1,6 +1,7 @@
 package blueduck.blighted_beasts.registry;
 
 import blueduck.blighted_beasts.BlightedBeasts;
+import blueduck.blighted_beasts.Config;
 import blueduck.blighted_beasts.effect.ConfusionEffect;
 import blueduck.blighted_beasts.entity.*;
 import blueduck.blighted_beasts.entity.projectile.ReverbProjectile;
@@ -53,6 +54,10 @@ public class BlightEntities {
             () -> EntityType.Builder.of(Skitter::new, MobCategory.MONSTER).sized(1.3F, 1.9F)
                     .build(new ResourceLocation(BlightedBeasts.MODID, "skitter").toString()));
 
+    public static final RegistryObject<EntityType<GrandSkitter>> GRAND_SKITTER = ENTITIES.register("grand_skitter",
+            () -> EntityType.Builder.of(GrandSkitter::new, MobCategory.MONSTER).sized(4.6F, 5.9F)
+                    .build(new ResourceLocation(BlightedBeasts.MODID, "grand_skitter").toString()));
+
 
     public static final RegistryObject<EntityType<SculkPearlProjectile>> SCULK_PEARL = ENTITIES.register("sculk_pearl",
             () -> EntityType.Builder.<SculkPearlProjectile>of(SculkPearlProjectile::new, MobCategory.MISC).sized(.6f, .6f)
@@ -91,6 +96,7 @@ public class BlightEntities {
 
     public static final RegistryObject<Item> REVERB_PROJECTILE_ITEM = ITEMS.register("reverb_projectile",
             () -> new Item(new Item.Properties()));
+
 
 
 
