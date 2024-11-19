@@ -133,10 +133,10 @@ public class Skitter extends Monster implements VibrationListener.VibrationListe
 
     protected void playStepSound(BlockPos p_28301_, BlockState p_28302_) {
         if (this.getTarget() == null || this.getTarget().isDeadOrDying()) {
-            this.playSound(BlightSounds.SKITTER_WALK.get(), 1.0F, 1.0F);
+            this.playSound(BlightSounds.SKITTER_WALK.get(), 1.0F, 0.75F);
         }
         else {
-            this.playSound(BlightSounds.SKITTER_RUN.get(), 1.25F, 0.6F);
+            this.playSound(BlightSounds.SKITTER_RUN.get(), 0.625F, 0.6F);
         }
 
     }

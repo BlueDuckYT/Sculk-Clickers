@@ -10,7 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class SkitterRenderer extends MobRenderer<Skitter, SkitterModel<Skitter>> {
     public SkitterRenderer(EntityRendererProvider.Context context) {
-        super(context, new SkitterModel<>(context.bakeLayer(SkitterModel.LAYER_LOCATION)), 0.5F);
+        super(context, new SkitterModel<>(context.bakeLayer(SkitterModel.LAYER_LOCATION)), .7F);
     }
 
     @Override
