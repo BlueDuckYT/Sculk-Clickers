@@ -22,7 +22,6 @@ public final class ClientModEvents {
         event.registerLayerDefinition(ReverbModel.LAYER_LOCATION, ReverbModel::createBodyLayer);
         event.registerLayerDefinition(SeerModel.LAYER_LOCATION, SeerModel::createBodyLayer);
         event.registerLayerDefinition(BloaterModel.LAYER_LOCATION, BloaterModel::createBodyLayer);
-        event.registerLayerDefinition(SkitterModel.LAYER_LOCATION, SkitterModel::createBodyLayer);
         event.registerLayerDefinition(GrandSkitterModel.LAYER_LOCATION, GrandSkitterModel::createBodyLayer);
 
     }
@@ -36,6 +35,9 @@ public final class ClientModEvents {
         event.registerEntityRenderer(BlightEntities.BLOATER.get(), BloaterRenderer::new);
         event.registerEntityRenderer(BlightEntities.SKITTER.get(), SkitterRenderer::new);
         event.registerEntityRenderer(BlightEntities.GRAND_SKITTER.get(), GrandSkitterRenderer::new);
+        event.registerEntityRenderer(BlightEntities.SCULK_APPARITION.get(), ApparitionRenderer::new);
+        event.registerEntityRenderer(BlightEntities.BECKON.get(), BeckonRenderer::new);
+        event.registerEntityRenderer(BlightEntities.BEHEMOTH.get(), BehemothRenderer::new);
         event.registerEntityRenderer(BlightEntities.SCULK_PEARL.get(), SculkPearlRenderer::new);
     }
 }

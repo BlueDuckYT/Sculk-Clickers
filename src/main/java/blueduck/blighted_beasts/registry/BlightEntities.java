@@ -1,11 +1,11 @@
 package blueduck.blighted_beasts.registry;
 
 import blueduck.blighted_beasts.BlightedBeasts;
-import blueduck.blighted_beasts.Config;
 import blueduck.blighted_beasts.effect.ConfusionEffect;
 import blueduck.blighted_beasts.entity.*;
 import blueduck.blighted_beasts.entity.projectile.ReverbProjectile;
 import blueduck.blighted_beasts.entity.projectile.SculkPearlProjectile;
+import blueduck.blighted_beasts.item.PuppetItem;
 import blueduck.blighted_beasts.item.SculkPearlItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
@@ -58,6 +58,18 @@ public class BlightEntities {
             () -> EntityType.Builder.of(GrandSkitter::new, MobCategory.MONSTER).sized(4.6F, 5.9F)
                     .build(new ResourceLocation(BlightedBeasts.MODID, "grand_skitter").toString()));
 
+    public static final RegistryObject<EntityType<Apparition>> SCULK_APPARITION = ENTITIES.register("sculk_apparition",
+            () -> EntityType.Builder.of(Apparition::new, MobCategory.MONSTER).sized(0.875F, 1.975F)
+                    .build(new ResourceLocation(BlightedBeasts.MODID, "sculk_apparition").toString()));
+
+    public static final RegistryObject<EntityType<Beckon>> BECKON = ENTITIES.register("beckon",
+            () -> EntityType.Builder.of(Beckon::new, MobCategory.MONSTER).sized(0.875F, 0.875F)
+                    .build(new ResourceLocation(BlightedBeasts.MODID, "beckon").toString()));
+
+    public static final RegistryObject<EntityType<Behemoth>> BEHEMOTH = ENTITIES.register("behemoth",
+            () -> EntityType.Builder.of(Behemoth::new, MobCategory.MONSTER).sized(2.3F, 2.5F)
+                    .build(new ResourceLocation(BlightedBeasts.MODID, "behemoth").toString()));
+
 
     public static final RegistryObject<EntityType<SculkPearlProjectile>> SCULK_PEARL = ENTITIES.register("sculk_pearl",
             () -> EntityType.Builder.<SculkPearlProjectile>of(SculkPearlProjectile::new, MobCategory.MISC).sized(.6f, .6f)
@@ -90,6 +102,22 @@ public class BlightEntities {
     public static final RegistryObject<ForgeSpawnEggItem> SKITTER_SPAWN_EGG = ITEMS.register("skitter_spawn_egg",
             () -> new ForgeSpawnEggItem(SKITTER, 8307, 1872861,
                     new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<ForgeSpawnEggItem> APPARITION_SPAWN_EGG = ITEMS.register("sculk_apparition_spawn_egg",
+            () -> new ForgeSpawnEggItem(SCULK_APPARITION, 1872861, 8307,
+                    new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<ForgeSpawnEggItem> BEHEMOTH_SPAWN_EGG = ITEMS.register("behemoth_spawn_egg",
+            () -> new ForgeSpawnEggItem(BEHEMOTH, 1872861, 8307,
+                    new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<ForgeSpawnEggItem> BECKON_SPAWN_EGG = ITEMS.register("beckon_spawn_egg",
+            () -> new ForgeSpawnEggItem(BECKON, 1872861, 8307,
+                    new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<Item> BECKON_ITEM = ITEMS.register("beckon",
+            () -> new PuppetItem(new Item.Properties().tab(CreativeModeTab.TAB_COMBAT), BECKON::get));
+
 
     public static final RegistryObject<Item> SCULK_PEARL_ITEM = ITEMS.register("sculk_pearl",
             () -> new SculkPearlItem(new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));

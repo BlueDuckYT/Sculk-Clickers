@@ -46,6 +46,25 @@ public class Config
             .comment("How long (in ticks) should the Sculk Pearl's confusion effect last?")
             .defineInRange("sculk_pearl_confusion_duration", 300, 0, Integer.MAX_VALUE);
 
+    private static final ForgeConfigSpec.DoubleValue APPARITION_SPAWN_CHANCE_CATALYST = BUILDER
+            .comment("Chance that an Apparition spawns when a mob dies near a Sculk Catalyst")
+            .defineInRange("catalyst_apparition_chance", .2, 0, 1);
+
+    private static final ForgeConfigSpec.DoubleValue APPARITION_SPAWN_CHANCE_BLOATER = BUILDER
+            .comment("Chance that an Apparition spawns when a mob dies near a Bloater")
+            .defineInRange("bloater_apparition_chance", .1, 0, 1);
+
+    private static final ForgeConfigSpec.DoubleValue APPARITION_SPAWN_CHANCE_BLOATER_EXPLODE = BUILDER
+            .comment("Chance that an Apparition spawns when a bloater explodes")
+            .defineInRange("bloater_explode_apparition_chance", .375, 0, 1);
+
+    private static final ForgeConfigSpec.DoubleValue APPARITION_SPAWN_CHANCE_SICKNESS = BUILDER
+            .comment("Chance that an Apparition spawns every tick that the player has the Sculk Sickness (Only used for compatibility, multiplied by stage of sickness)")
+            .defineInRange("sickness_apparition_chance", 0.0002, 0, 1);
+
+    private static final ForgeConfigSpec.DoubleValue APPARITION_HEAL_CHANCE = BUILDER
+            .comment("Chance that killing an Apparition reduces Sculk Sickness (Only used for compatibility)")
+            .defineInRange("sickness_apparition_heal_chance", 0.1, 0, 1);
 
     private static final ForgeConfigSpec.BooleanValue BLOATERS_ATTACK_ALL_MOBS = BUILDER
             .comment("Whether the bloater should attack all mobs or just players")
@@ -54,6 +73,14 @@ public class Config
     private static final ForgeConfigSpec.BooleanValue SKITTERS_ATTACK_ALL_MOBS = BUILDER
             .comment("Whether the skitter should attack all mobs or just players")
             .define("skitters_attack_all_mobs", true);
+
+    private static final ForgeConfigSpec.IntValue BECKON_RANGE = BUILDER
+            .comment("Aggro range of the Beckon's screech")
+            .defineInRange("beckon_range", 12, 0, 200);
+
+    private static final ForgeConfigSpec.BooleanValue BECKON_DISTRACTS_ONLY_SCULK = BUILDER
+            .comment("Whether the Beckon should distract only Sculk mobs (instead of all mobs)")
+            .define("beckon_distracts_only_sculk", false);
 
 
 
@@ -67,12 +94,23 @@ public class Config
     public static int reverbDamage = 7;
     public static double reverbSpeed = .3;
 
+    public static double apparitionCatalystSpawnChance;
+    public static double apparitionBloaterSpawnChance;
+    public static double apparitionBloaterExplodeSpawnChance;
+
+    public static double apparitionSicknessSpawnChance;
+    public static double apparitionSicknessHealChance;
+
+    public static int beckonRange;
+    public static boolean beckonDistractsSculkOnly;
+
     public static boolean canSeerDetectPlayers;
     public static boolean canSeerAttackNonSculk;
     public static boolean sculkPearlInfighting;
     public static int sculkPearlDuration;
     public static boolean bloatersAttackAllMobs;
     public static boolean skittersAttackAllMobs;
+
 
 
     @SubscribeEvent
@@ -91,5 +129,15 @@ public class Config
         sculkPearlDuration = SCULK_PEARL_CONFUSION_DURATION.get();
         bloatersAttackAllMobs = BLOATERS_ATTACK_ALL_MOBS.get();
         skittersAttackAllMobs = SKITTERS_ATTACK_ALL_MOBS.get();
+
+        apparitionCatalystSpawnChance = APPARITION_SPAWN_CHANCE_CATALYST.get();
+        apparitionBloaterSpawnChance = APPARITION_SPAWN_CHANCE_BLOATER.get();
+        apparitionBloaterExplodeSpawnChance = APPARITION_SPAWN_CHANCE_BLOATER_EXPLODE.get();
+
+        apparitionSicknessSpawnChance = APPARITION_SPAWN_CHANCE_SICKNESS.get();
+        apparitionSicknessHealChance = APPARITION_HEAL_CHANCE.get();
+
+        beckonRange = BECKON_RANGE.get();
+        beckonDistractsSculkOnly = BECKON_DISTRACTS_ONLY_SCULK.get();
     }
 }

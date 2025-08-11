@@ -22,8 +22,12 @@ public class ModEvents {
         event.put(BlightEntities.SEER.get(), Seer.createAttributes().build());
         event.put(BlightEntities.BLOATER.get(), Bloater.createAttributes().build());
         event.put(BlightEntities.SKITTER.get(), Skitter.createAttributes().build());
+        event.put(BlightEntities.SCULK_APPARITION.get(), Apparition.createAttributes().build());
+        event.put(BlightEntities.BECKON.get(), Beckon.createAttributes().build());
+        event.put(BlightEntities.BEHEMOTH.get(), Behemoth.createAttributes().build());
 
         event.put(BlightEntities.GRAND_SKITTER.get(), GrandSkitter.createAttributes().build());
+
 
 
 

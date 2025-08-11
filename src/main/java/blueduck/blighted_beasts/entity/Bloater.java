@@ -24,6 +24,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -41,6 +42,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SculkCatalystBlock;
 import net.minecraft.world.level.block.entity.SculkCatalystBlockEntity;
 import net.minecraft.world.level.gameevent.DynamicGameEventListener;
@@ -265,13 +267,28 @@ public class Bloater extends Monster implements VibrationListener.VibrationListe
 
 
     private void explodeCreeper() {
+        for(int i = 0; i < 64; ++i) {
+            this.level.addParticle(ParticleTypes.SCULK_SOUL, this.getX() + this.random.nextDouble() * 0.2 - 0.1, this.getY() + this.random.nextDouble() * 0.2 - 0.1, this.getZ() + this.random.nextDouble() * 0.2 - 0.1, this.random.nextGaussian(), this.random.nextDouble() * 0.1 - 0.05, this.random.nextGaussian());
+            }
         if (!this.level.isClientSide) {
             this.dead = true;
-            placeFeature(getServer().getLevel(getLevel().dimension()), Holder.direct(getLevel().registryAccess().registryOrThrow(Registry.CONFIGURED_FEATURE_REGISTRY).get(new ResourceLocation("blighted_beasts","sculk_patch_bloater"))), blockPosition());
-            for(int i = 0; i < 64; ++i) {
-                this.level.addParticle(ParticleTypes.SCULK_SOUL, this.getX() + this.random.nextDouble() * 0.2 - 0.1, this.getY() + this.random.nextDouble() * 0.2 - 0.1, this.getZ() + this.random.nextDouble() * 0.2 - 0.1, this.random.nextGaussian(), this.random.nextDouble() * 0.1 - 0.05, this.random.nextGaussian());
+            if (!this.level.getBlockState(this.blockPosition()).getBlock().isPossibleToRespawnInThis()) {
+                this.level.setBlock(this.blockPosition(), Blocks.AIR.defaultBlockState(), 2);
             }
+            placeFeature(getServer().getLevel(getLevel().dimension()), Holder.direct(getLevel().registryAccess().registryOrThrow(Registry.CONFIGURED_FEATURE_REGISTRY).get(new ResourceLocation("blighted_beasts","sculk_patch_bloater"))), blockPosition());
+
             this.discard();
+
+            if (this.getRandom().nextDouble() < Config.apparitionBloaterExplodeSpawnChance) {
+                Apparition apparition = BlightEntities.SCULK_APPARITION.get().create(this.level);
+                apparition.moveTo(this.getX(), this.getY(), this.getZ(), this.getYRot(), this.getXRot());
+                ((ServerLevel)this.level).addFreshEntityWithPassengers(apparition);
+
+                for (int i = 0; i < 60; i++) {
+                    this.level.addParticle(ParticleTypes.SOUL_FIRE_FLAME, this.getRandomX(0.5D), this.getRandomY() - 0.25D, this.getRandomZ(0.5D), (this.random.nextDouble() - 0.5D) * .5D, -this.random.nextDouble() * 0.25 + .1, (this.random.nextDouble() - 0.5D) * .5D);
+                }
+
+            }
 
             AABB aabb = (new AABB(this.getOnPos())).inflate(2.0D);
             List<LivingEntity> nearbyEntities = this.getLevel().getEntitiesOfClass(LivingEntity.class, aabb);

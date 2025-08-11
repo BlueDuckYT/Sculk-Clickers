@@ -2,6 +2,16 @@
   "entity.reaper.ambient": {
     "sounds": [
       {
+        "name": "blighted_beasts:entity/reaper/reaper_idle_1",
+        "stream": true,
+        "weight": 12
+      },
+      {
+        "name": "blighted_beasts:entity/reaper/reaper_idle_2",
+        "stream": true,
+        "weight": 20
+      },
+      {
         "name": "block/sculk_sensor/sculk_clicking1",
         "volume": 0.56
       },
@@ -241,5 +251,142 @@
       "mob/warden/death_2"
     ],
     "subtitle": "subtitles.entity.skitter.death"
+  },
+  "entity.apparition.ambient": {
+    "sounds": [
+      "mob/vex/idle1",
+      "mob/vex/idle2",
+      "mob/vex/idle3",
+      "mob/vex/idle4"
+    ],
+    "subtitle": "subtitles.entity.apparition.ambient"
+  },
+  "entity.apparition.charge": {
+    "sounds": [
+      "mob/vex/charge1",
+      "mob/vex/charge2",
+      "mob/vex/charge3"
+    ],
+    "subtitle": "subtitles.entity.apparition.charge"
+  },
+  "entity.apparition.death": {
+    "sounds": [
+      "mob/vex/death1",
+      "mob/vex/death2"
+    ],
+    "subtitle": "subtitles.entity.apparition.death"
+  },
+  "entity.apparition.hurt": {
+    "sounds": [
+      "mob/vex/hurt1",
+      "mob/vex/hurt2"
+    ],
+    "subtitle": "subtitles.entity.apparition.hurt"
+  },
+  "entity.beckon.shriek": {
+    "sounds": [
+      {
+        "name": "blighted_beasts:entity/beckon/beckon_1",
+        "stream": true,
+        "weight": 50
+      },
+      {
+        "name": "blighted_beasts:entity/beckon/beckon_2",
+        "stream": true,
+        "weight": 50
+      },
+      {
+        "name": "blighted_beasts:entity/beckon/beckon_3",
+        "stream": true,
+        "weight": 50
+      },
+      {
+        "name": "blighted_beasts:entity/beckon/beckon_4",
+        "stream": true,
+        "weight": 30
+      },
+      {
+        "name": "blighted_beasts:entity/beckon/beckon_5",
+        "stream": true,
+        "weight": 1
+      },
+      {
+        "name": "blighted_beasts:entity/beckon/beckon_6",
+        "stream": true,
+        "weight": 1
+      },
+      {
+        "name": "blighted_beasts:entity/beckon/beckon_7",
+        "stream": true,
+        "weight": 1
+      }
+    ],
+    "subtitle": "subtitles.entity.beckon.shriek"
+  },
+  "entity.behemoth.ambient": {
+    "sounds": [
+      {
+        "name": "blighted_beasts:entity/behemoth/idle_1",
+        "stream": true,
+        "weight": 50
+      },
+      {
+        "name": "blighted_beasts:entity/behemoth/idle_2",
+        "stream": true,
+        "weight": 50
+      }
+    ],
+    "subtitle": "subtitles.entity.behemoth.idle"
+  },
+  "entity.behemoth.hurt": {
+    "sounds": [
+      "mob/warden/hurt_1",
+      "mob/warden/hurt_2",
+      "mob/warden/hurt_3",
+      "mob/warden/hurt_4"
+    ],
+    "subtitle": "subtitles.entity.behemoth.hurt"
+  },
+  "entity.behemoth.death": {
+    "sounds": [
+      "mob/warden/death_1",
+      "mob/warden/death_2"
+    ],
+    "subtitle": "subtitles.entity.behemoth.death"
+  },
+  "entity.behemoth.walk": {
+    "sounds": [
+      {
+        "name": "blighted_beasts:entity/behemoth/walk_1",
+        "stream": true,
+        "weight": 50
+      }
+    ],
+    "subtitle": "subtitles.entity.behemoth.walk"
+  },
+  "entity.behemoth.run": {
+    "sounds": [
+      {
+        "name": "blighted_beasts:entity/behemoth/run_1",
+        "stream": true,
+        "weight": 50
+      }
+    ],
+    "subtitle": "subtitles.entity.behemoth.run"
+  },
+  "entity.behemoth.sniff": {
+    "sounds": [
+      {
+        "name": "blighted_beasts:entity/behemoth/sniff_1",
+        "stream": true,
+        "weight": 50
+      },
+      {
+        "name": "blighted_beasts:entity/behemoth/sniff_2",
+        "stream": true,
+        "weight": 50
+      }
+    ],
+    "subtitle": "subtitles.entity.behemoth.sniff"
   }
 }

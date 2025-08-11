@@ -44,5 +44,19 @@ public class BlightSounds {
     public static final RegistryObject<SoundEvent> SKITTER_HURT = SOUNDS.register("entity.skitter.hurt", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.skitter.hurt")));
     public static final RegistryObject<SoundEvent> SKITTER_DEATH = SOUNDS.register("entity.skitter.death", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.skitter.death")));
 
+    public static final RegistryObject<SoundEvent> APPARITION_AMBIENT = SOUNDS.register("entity.apparition.ambient", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.apparition.walk")));
+    public static final RegistryObject<SoundEvent> APPARITION_HURT = SOUNDS.register("entity.apparition.hurt", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.apparition.hurt")));
+    public static final RegistryObject<SoundEvent> APPARITION_DEATH = SOUNDS.register("entity.apparition.death", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.apparition.death")));
+
+    public static final RegistryObject<SoundEvent> BEHEMOTH_AMBIENT = SOUNDS.register("entity.behemoth.ambient", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.behemoth.ambient")));
+    public static final RegistryObject<SoundEvent> BEHEMOTH_HURT = SOUNDS.register("entity.behemoth.hurt", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.behemoth.hurt")));
+    public static final RegistryObject<SoundEvent> BEHEMOTH_DEATH = SOUNDS.register("entity.behemoth.death", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.behemoth.death")));
+    public static final RegistryObject<SoundEvent> BEHEMOTH_WALK = SOUNDS.register("entity.behemoth.walk", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.behemoth.walk")));
+    public static final RegistryObject<SoundEvent> BEHEMOTH_RUN = SOUNDS.register("entity.behemoth.run", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.behemoth.run")));
+    public static final RegistryObject<SoundEvent> BEHEMOTH_SNIFF = SOUNDS.register("entity.behemoth.sniff", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.behemoth.sniff")));
+
+
+
+    public static final RegistryObject<SoundEvent> BECKON_SHRIEK = SOUNDS.register("entity.beckon.shriek", () -> new SoundEvent(new ResourceLocation(BlightedBeasts.MODID, "entity.beckon.shriek")));
 
 }
