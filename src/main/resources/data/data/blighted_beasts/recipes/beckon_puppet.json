@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "blighted_beasts:sculk_pearl"
+    },
+    "X": {
+      "item": "minecraft:soul_sand"
+    }
+  },
+  "pattern": [
+    "###",
+    "#R#",
+    "XXX"
+  ],
+  "result": {
+    "item": "blighted_beasts:beckon"
+  }
+}

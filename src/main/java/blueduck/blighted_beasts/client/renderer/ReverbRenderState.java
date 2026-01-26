@@ -1,0 +1,11 @@
+package blueduck.blighted_beasts.client.renderer;
+
+import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
+import net.minecraft.core.BlockPos;
+import org.jetbrains.annotations.Nullable;
+
+public class ReverbRenderState extends LivingEntityRenderState {
+    @Nullable
+    public BlockPos disturbanceLocation;
+    public boolean hasTarget;
+}

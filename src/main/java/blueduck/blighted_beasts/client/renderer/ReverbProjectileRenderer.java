@@ -1,60 +1,58 @@
 package blueduck.blighted_beasts.client.renderer;
 
+import blueduck.blighted_beasts.entity.projectile.ReverbProjectile;
 import blueduck.blighted_beasts.registry.BlightEntities;
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Vector3f;
+import com.mojang.math.Axis;
 import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.ItemRenderer;
+import net.minecraft.client.renderer.entity.state.EntityRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.renderer.texture.TextureAtlas;
-import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.projectile.ItemSupplier;
+import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.ItemLike;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
-public class ReverbProjectileRenderer<T extends Entity> extends EntityRenderer<T> {
-    private static final float MIN_CAMERA_DISTANCE_SQUARED = 12.25F;
+public class ReverbProjectileRenderer extends EntityRenderer<ReverbProjectile, ReverbProjectileRenderer.ReverbProjectileRenderState> {
     private final ItemRenderer itemRenderer;
-    private final float scale;
-    private final boolean fullBright;
 
-    public ReverbProjectileRenderer(EntityRendererProvider.Context p_174416_, float p_174417_, boolean p_174418_) {
-        super(p_174416_);
-        this.itemRenderer = p_174416_.getItemRenderer();
-        this.scale = p_174417_;
-        this.fullBright = p_174418_;
+    public ReverbProjectileRenderer(EntityRendererProvider.Context context) {
+        super(context);
+        this.itemRenderer = context.getItemRenderer();
     }
 
-    public ReverbProjectileRenderer(EntityRendererProvider.Context p_174414_) {
-        this(p_174414_, 1.0F, false);
+    @Override
+    public ReverbProjectileRenderState createRenderState() {
+        return new ReverbProjectileRenderState();
     }
 
-    protected int getBlockLightLevel(T p_116092_, BlockPos p_116093_) {
-        return this.fullBright ? 15 : super.getBlockLightLevel(p_116092_, p_116093_);
+    @Override
+    public void extractRenderState(ReverbProjectile entity, ReverbProjectileRenderState state, float partialTick) {
+        super.extractRenderState(entity, state, partialTick);
+        state.item = new ItemStack(BlightEntities.REVERB_PROJECTILE_ITEM.get());
     }
 
-    public void render(T p_116085_, float p_116086_, float p_116087_, PoseStack p_116088_, MultiBufferSource p_116089_, int p_116090_) {
-        if (p_116085_.tickCount >= 2 || !(this.entityRenderDispatcher.camera.getEntity().distanceToSqr(p_116085_) < 12.25D)) {
-            p_116088_.pushPose();
-            p_116088_.scale(this.scale, this.scale, this.scale);
-            p_116088_.mulPose(this.entityRenderDispatcher.cameraOrientation());
-            p_116088_.mulPose(Vector3f.YP.rotationDegrees(180.0F));
-            this.itemRenderer.renderStatic(new ItemStack(BlightEntities.REVERB_PROJECTILE_ITEM.get()), ItemTransforms.TransformType.GROUND, p_116090_, OverlayTexture.NO_OVERLAY, p_116088_, p_116089_, p_116085_.getId());
-            p_116088_.popPose();
-            super.render(p_116085_, p_116086_, p_116087_, p_116088_, p_116089_, p_116090_);
-        }
+    @Override
+    public void render(ReverbProjectileRenderState state, PoseStack poseStack, MultiBufferSource bufferSource, int packedLight) {
+        poseStack.pushPose();
+        poseStack.mulPose(this.entityRenderDispatcher.cameraOrientation());
+        poseStack.mulPose(Axis.YP.rotationDegrees(180.0F));
+        this.itemRenderer.renderStatic(state.item, ItemDisplayContext.GROUND, packedLight, OverlayTexture.NO_OVERLAY, poseStack, bufferSource, null, 0);
+        poseStack.popPose();
+        super.render(state, poseStack, bufferSource, packedLight);
     }
 
-    public ResourceLocation getTextureLocation(Entity p_116083_) {
+    @Override
+    public ResourceLocation getTextureLocation(ReverbProjectileRenderState state) {
         return TextureAtlas.LOCATION_BLOCKS;
+    }
+
+    public static class ReverbProjectileRenderState extends EntityRenderState {
+        public ItemStack item = ItemStack.EMPTY;
     }
 }

@@ -1,0 +1,415 @@
+{
+  "entity.reaper.ambient": {
+    "sounds": [
+      {
+        "name": "blighted_beasts:entity/reaper/reaper_idle_1",
+        "stream": true,
+        "weight": 12
+      },
+      {
+        "name": "blighted_beasts:entity/reaper/reaper_idle_2",
+        "stream": true,
+        "weight": 20
+      },
+      {
+        "name": "block/sculk_sensor/sculk_clicking1",
+        "volume": 0.56
+      },
+      {
+        "name": "block/sculk_sensor/sculk_clicking2",
+        "volume": 0.56
+      },
+      {
+        "name": "block/sculk_sensor/sculk_clicking3",
+        "volume": 0.56
+      },
+      {
+        "name": "block/sculk_sensor/sculk_clicking4",
+        "volume": 0.56
+      },
+      {
+        "name": "block/sculk_sensor/sculk_clicking5",
+        "volume": 0.56
+      },
+      {
+        "name": "block/sculk_sensor/sculk_clicking6",
+        "volume": 0.56
+      }
+    ],
+    "subtitle": "subtitles.entity.reaper.ambient"
+  },
+  "entity.reaper.click": {
+    "sounds": [
+      "mob/warden/tendril_clicks_1",
+      "mob/warden/tendril_clicks_2",
+      "mob/warden/tendril_clicks_3",
+      "mob/warden/tendril_clicks_4",
+      "mob/warden/tendril_clicks_5",
+      "mob/warden/tendril_clicks_6"
+    ],
+    "subtitle": "subtitles.entity.reaper.click"
+  },
+  "entity.reaper.hurt": {
+    "sounds": [
+      "mob/warden/hurt_1",
+      "mob/warden/hurt_2",
+      "mob/warden/hurt_3",
+      "mob/warden/hurt_4"
+    ],
+    "subtitle": "subtitles.entity.reaper.hurt"
+  },
+  "entity.reaper.death": {
+    "sounds": [
+      "mob/warden/death_1",
+      "mob/warden/death_2"
+    ],
+    "subtitle": "subtitles.entity.reaper.death"
+  },
+  "entity.reverb.ambient": {
+    "sounds": [
+      {
+        "name": "mob/spider/say1",
+        "pitch": 0.5
+      },
+      {
+        "name": "mob/spider/say2",
+        "pitch": 0.5
+      },
+      {
+        "name": "mob/spider/say3",
+        "pitch": 0.5
+      },
+      {
+        "name": "mob/spider/say4",
+        "pitch": 0.5
+      }
+    ],
+    "subtitle": "subtitles.entity.reverb.ambient"
+  },
+  "entity.reverb.click": {
+    "sounds": [
+      "mob/warden/tendril_clicks_1",
+      "mob/warden/tendril_clicks_2",
+      "mob/warden/tendril_clicks_3",
+      "mob/warden/tendril_clicks_4",
+      "mob/warden/tendril_clicks_5",
+      "mob/warden/tendril_clicks_6"
+    ],
+    "subtitle": "subtitles.entity.reverb.click"
+  },
+  "entity.reverb.shoot": {
+    "sounds": [
+      "mob/llama/spit1",
+      "mob/llama/spit2"
+    ],
+    "subtitle": "subtitles.entity.reverb.shoot"
+  },
+  "entity.reverb.hurt": {
+    "sounds": [
+      "mob/warden/hurt_1",
+      "mob/warden/hurt_2",
+      "mob/warden/hurt_3",
+      "mob/warden/hurt_4"
+    ],
+    "subtitle": "subtitles.entity.reverb.hurt"
+  },
+  "entity.reverb.death": {
+    "sounds": [
+      "mob/warden/death_1",
+      "mob/warden/death_2"
+    ],
+    "subtitle": "subtitles.entity.reverb.death"
+  },
+  "entity.seer.ambient": {
+    "sounds": [
+      "blighted_beasts:entity/seer/seer_ambient_1",
+      "blighted_beasts:entity/seer/seer_ambient_2"
+    ],
+    "subtitle": "subtitles.entity.reverb.ambient"
+  },
+  "entity.seer.aggro": {
+    "sounds": [
+      "blighted_beasts:entity/seer/seer_aggro_1",
+      "blighted_beasts:entity/seer/seer_aggro_2",
+      "blighted_beasts:entity/seer/seer_aggro_3"
+    ],
+    "subtitle": "subtitles.entity.seer.aggro"
+  },
+  "entity.seer.shriek": {
+    "sounds": [
+      "mob/warden/hurt_1",
+      "mob/warden/hurt_2",
+      "mob/warden/hurt_3",
+      "mob/warden/hurt_4"
+    ],
+    "subtitle": "subtitles.entity.seer.shriek"
+  },
+  "entity.seer.hurt": {
+    "sounds": [
+      "mob/warden/hurt_1",
+      "mob/warden/hurt_2",
+      "mob/warden/hurt_3",
+      "mob/warden/hurt_4"
+    ],
+    "subtitle": "subtitles.entity.seer.hurt"
+  },
+  "entity.seer.death": {
+    "sounds": [
+      "mob/warden/death_1",
+      "mob/warden/death_2"
+    ],
+    "subtitle": "subtitles.entity.seer.death"
+  },
+  "entity.bloater.click": {
+    "sounds": [
+      "mob/warden/tendril_clicks_1",
+      "mob/warden/tendril_clicks_2",
+      "mob/warden/tendril_clicks_3",
+      "mob/warden/tendril_clicks_4",
+      "mob/warden/tendril_clicks_5",
+      "mob/warden/tendril_clicks_6"
+    ],
+    "subtitle": "subtitles.entity.bloater.click"
+  },
+  "entity.bloater.hurt": {
+    "sounds": [
+      "mob/warden/hurt_1",
+      "mob/warden/hurt_2",
+      "mob/warden/hurt_3",
+      "mob/warden/hurt_4"
+    ],
+    "subtitle": "subtitles.entity.bloater.hurt"
+  },
+  "entity.bloater.death": {
+    "sounds": [
+      "mob/warden/death_1",
+      "mob/warden/death_2"
+    ],
+    "subtitle": "subtitles.entity.bloater.death"
+  },
+  "entity.skitter.walk": {
+    "sounds": [
+      "mob/horse/soft1",
+      "mob/horse/soft2",
+      "mob/horse/soft3",
+      "mob/horse/soft4",
+      "mob/horse/soft5",
+      "mob/horse/soft6"
+    ],
+    "subtitle": "subtitles.entity.skitter.walk"
+  },
+  "entity.skitter.run": {
+    "sounds": [
+      "mob/horse/gallop1",
+      "mob/horse/gallop2",
+      "mob/horse/gallop3",
+      "mob/horse/gallop4"
+    ],
+    "subtitle": "subtitles.entity.skitter.run"
+  },
+  "entity.skitter.ambient": {
+  "sounds": [
+    {
+      "name": "block/sculk_sensor/sculk_clicking1",
+      "volume": 0.56
+    },
+    {
+      "name": "block/sculk_sensor/sculk_clicking2",
+      "volume": 0.56
+    },
+    {
+      "name": "block/sculk_sensor/sculk_clicking3",
+      "volume": 0.56
+    },
+    {
+      "name": "block/sculk_sensor/sculk_clicking4",
+      "volume": 0.56
+    },
+    {
+      "name": "block/sculk_sensor/sculk_clicking5",
+      "volume": 0.56
+    },
+    {
+      "name": "block/sculk_sensor/sculk_clicking6",
+      "volume": 0.56
+    }
+  ],
+  "subtitle": "subtitles.entity.skitter.ambient"
+  },
+  "entity.skitter.hurt": {
+    "sounds": [
+      "mob/warden/hurt_1",
+      "mob/warden/hurt_2",
+      "mob/warden/hurt_3",
+      "mob/warden/hurt_4"
+    ],
+    "subtitle": "subtitles.entity.skitter.hurt"
+  },
+  "entity.skitter.death": {
+    "sounds": [
+      "mob/warden/death_1",
+      "mob/warden/death_2"
+    ],
+    "subtitle": "subtitles.entity.skitter.death"
+  },
+  "entity.apparition.ambient": {
+    "sounds": [
+      "mob/vex/idle1",
+      "mob/vex/idle2",
+      "mob/vex/idle3",
+      "mob/vex/idle4"
+    ],
+    "subtitle": "subtitles.entity.apparition.ambient"
+  },
+  "entity.apparition.charge": {
+    "sounds": [
+      "mob/vex/charge1",
+      "mob/vex/charge2",
+      "mob/vex/charge3"
+    ],
+    "subtitle": "subtitles.entity.apparition.charge"
+  },
+  "entity.apparition.death": {
+    "sounds": [
+      "mob/vex/death1",
+      "mob/vex/death2"
+    ],
+    "subtitle": "subtitles.entity.apparition.death"
+  },
+  "entity.apparition.hurt": {
+    "sounds": [
+      "mob/vex/hurt1",
+      "mob/vex/hurt2"
+    ],
+    "subtitle": "subtitles.entity.apparition.hurt"
+  },
+  "entity.beckon.shriek": {
+    "sounds": [
+      {
+        "name": "blighted_beasts:entity/beckon/beckon_1",
+        "stream": true,
+        "weight": 50
+      },
+      {
+        "name": "blighted_beasts:entity/beckon/beckon_2",
+        "stream": true,
+        "weight": 50
+      },
+      {
+        "name": "blighted_beasts:entity/beckon/beckon_3",
+        "stream": true,
+        "weight": 50
+      },
+      {
+        "name": "blighted_beasts:entity/beckon/beckon_4",
+        "stream": true,
+        "weight": 30
+      },
+      {
+        "name": "blighted_beasts:entity/beckon/beckon_5",
+        "stream": true,
+        "weight": 1
+      },
+      {
+        "name": "blighted_beasts:entity/beckon/beckon_6",
+        "stream": true,
+        "weight": 1
+      },
+      {
+        "name": "blighted_beasts:entity/beckon/beckon_7",
+        "stream": true,
+        "weight": 1
+      }
+    ],
+    "subtitle": "subtitles.entity.beckon.shriek"
+  },
+  "entity.behemoth.ambient": {
+    "sounds": [
+      {
+        "name": "blighted_beasts:entity/behemoth/idle_1",
+        "stream": true,
+        "weight": 50
+      },
+      {
+        "name": "blighted_beasts:entity/behemoth/idle_2",
+        "stream": true,
+        "weight": 50
+      }
+    ],
+    "subtitle": "subtitles.entity.behemoth.idle"
+  },
+  "entity.behemoth.hurt": {
+    "sounds": [
+      "mob/warden/hurt_1",
+      "mob/warden/hurt_2",
+      "mob/warden/hurt_3",
+      "mob/warden/hurt_4"
+    ],
+    "subtitle": "subtitles.entity.behemoth.hurt"
+  },
+  "entity.behemoth.death": {
+    "sounds": [
+      "mob/warden/death_1",
+      "mob/warden/death_2"
+    ],
+    "subtitle": "subtitles.entity.behemoth.death"
+  },
+  "entity.behemoth.walk": {
+    "sounds": [
+      {
+        "name": "blighted_beasts:entity/behemoth/walk_1",
+        "stream": true,
+        "weight": 10
+      },
+      {
+        "name": "blighted_beasts:entity/behemoth/walk_2",
+        "stream": true,
+        "weight": 10
+      },
+      {
+        "name": "blighted_beasts:entity/behemoth/walk_3",
+        "stream": true,
+        "weight": 50,
+        "pitch": 1.2
+      }
+    ],
+    "subtitle": "subtitles.entity.behemoth.walk"
+  },
+  "entity.behemoth.run": {
+    "sounds": [
+      {
+        "name": "blighted_beasts:entity/behemoth/walk_1",
+        "stream": true,
+        "weight": 40,
+        "pitch": 0.5
+      },
+      {
+        "name": "blighted_beasts:entity/behemoth/walk_2",
+        "stream": true,
+        "weight": 10,
+        "pitch": 0.5
+      },
+      {
+        "name": "blighted_beasts:entity/behemoth/walk_3",
+        "stream": true,
+        "weight": 50
+      }
+    ],
+    "subtitle": "subtitles.entity.behemoth.run"
+  },
+  "entity.behemoth.sniff": {
+    "sounds": [
+      {
+        "name": "blighted_beasts:entity/behemoth/sniff_1",
+        "stream": true,
+        "weight": 50
+      },
+      {
+        "name": "blighted_beasts:entity/behemoth/sniff_2",
+        "stream": true,
+        "weight": 50
+      }
+    ],
+    "subtitle": "subtitles.entity.behemoth.sniff"
+  }
+}
