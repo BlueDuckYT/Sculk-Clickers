@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./gradlew build:*)",
+      "Bash(tee:*)",
+      "Bash(./gradlew clean:*)",
+      "Bash(./gradlew runClient:*)",
+      "Bash(dir \"C:\\\\Users\\\\Nikit\\\\Desktop\\\\Sculk-Clickers-1.21.5\\\\sourcecodefiles\")",
+      "Bash(move:*)",
+      "Bash(copy:*)",
+      "Bash(xcopy:*)",
+      "Bash(cmd /c:*)",
+      "Bash(dir:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(.\\\\gradlew build)"
+    ]
+  }
+}

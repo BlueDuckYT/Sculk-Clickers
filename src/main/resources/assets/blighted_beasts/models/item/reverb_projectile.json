@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "blighted_beasts:item/reverb_projectile"
+  }
+}

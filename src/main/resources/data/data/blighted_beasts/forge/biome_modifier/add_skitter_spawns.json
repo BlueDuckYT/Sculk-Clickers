@@ -1,0 +1,11 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#blighted_beasts:sculk_spawns",
+  "spawners":
+  {
+    "type": "blighted_beasts:skitter",
+    "weight": 2,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}
